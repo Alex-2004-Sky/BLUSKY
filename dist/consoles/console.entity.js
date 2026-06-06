@@ -16,19 +16,19 @@ let Console = class Console {
 };
 exports.Console = Console;
 __decorate([
-    (0, typeorm_1.PrimaryGeneratedColumn)({ name: 'ID' }),
+    (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
 ], Console.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'NAME', length: 100 }),
+    (0, typeorm_1.Column)({ length: 100 }),
     __metadata("design:type", String)
 ], Console.prototype, "name", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'STATUS', default: 'idle', length: 20 }),
+    (0, typeorm_1.Column)({ default: 'idle', length: 20 }),
     __metadata("design:type", String)
 ], Console.prototype, "status", void 0);
 __decorate([
-    (0, typeorm_1.CreateDateColumn)({ name: 'CREATED_AT' }),
+    (0, typeorm_1.CreateDateColumn)({ name: 'created_at' }),
     __metadata("design:type", Date)
 ], Console.prototype, "createdAt", void 0);
 __decorate([
@@ -36,6 +36,6 @@ __decorate([
     __metadata("design:type", Array)
 ], Console.prototype, "sessions", void 0);
 exports.Console = Console = __decorate([
-    (0, typeorm_1.Entity)('CONSOLES')
+    (0, typeorm_1.Entity)('consoles')
 ], Console);
 //# sourceMappingURL=console.entity.js.map

@@ -10,17 +10,14 @@ import { Session } from '../sessions/session.entity';
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
-  useFactory: (config: ConfigService) => ({
-  type: 'oracle',
-  host: config.get('DB_HOST'),
-  port: +config.get('DB_PORT'),
-  username: config.get('DB_USERNAME'),
-  password: config.get('DB_PASSWORD'),
-  serviceName: config.get('DB_SERVICE_NAME'),  // ← must be serviceName
-  synchronize: false,
-  logging: ['error'],
-  entities: [User, Console, Session],
-}),
+      useFactory: (config: ConfigService) => ({
+        type: 'postgres',
+        url: config.get('DATABASE_URL'),
+        ssl: { rejectUnauthorized: false },
+        synchronize: true,
+        logging: ['error'],
+        entities: [User, Console, Session],
+      }),
     }),
   ],
 })

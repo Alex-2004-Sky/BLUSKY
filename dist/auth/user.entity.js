@@ -15,26 +15,26 @@ let User = class User {
 };
 exports.User = User;
 __decorate([
-    (0, typeorm_1.PrimaryGeneratedColumn)({ name: 'ID' }),
+    (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
 ], User.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'USERNAME', length: 80, unique: true }),
+    (0, typeorm_1.Column)({ length: 80, unique: true }),
     __metadata("design:type", String)
 ], User.prototype, "username", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'PASSWORD_HASH', length: 255 }),
+    (0, typeorm_1.Column)({ name: 'password_hash', length: 255 }),
     __metadata("design:type", String)
 ], User.prototype, "passwordHash", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'ROLE', default: 'staff', length: 20 }),
+    (0, typeorm_1.Column)({ default: 'staff', length: 20 }),
     __metadata("design:type", String)
 ], User.prototype, "role", void 0);
 __decorate([
-    (0, typeorm_1.CreateDateColumn)({ name: 'CREATED_AT' }),
+    (0, typeorm_1.CreateDateColumn)({ name: 'created_at' }),
     __metadata("design:type", Date)
 ], User.prototype, "createdAt", void 0);
 exports.User = User = __decorate([
-    (0, typeorm_1.Entity)('USERS')
+    (0, typeorm_1.Entity)('users')
 ], User);
 //# sourceMappingURL=user.entity.js.map

@@ -16,47 +16,47 @@ let Session = class Session {
 };
 exports.Session = Session;
 __decorate([
-    (0, typeorm_1.PrimaryGeneratedColumn)({ name: 'ID' }),
+    (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
 ], Session.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.ManyToOne)(() => console_entity_1.Console, { eager: true }),
-    (0, typeorm_1.JoinColumn)({ name: 'CONSOLE_ID' }),
+    (0, typeorm_1.JoinColumn)({ name: 'console_id' }),
     __metadata("design:type", console_entity_1.Console)
 ], Session.prototype, "console", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'PLAYER_NAME', length: 100, default: 'Guest' }),
+    (0, typeorm_1.Column)({ name: 'player_name', length: 100, default: 'Guest' }),
     __metadata("design:type", String)
 ], Session.prototype, "playerName", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'START_TIME' }),
+    (0, typeorm_1.Column)({ name: 'start_time' }),
     __metadata("design:type", Date)
 ], Session.prototype, "startTime", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'END_TIME', nullable: true }),
+    (0, typeorm_1.Column)({ name: 'end_time', nullable: true }),
     __metadata("design:type", Date)
 ], Session.prototype, "endTime", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'DURATION_SECONDS', type: 'decimal', precision: 10, scale: 2, nullable: true }),
+    (0, typeorm_1.Column)({ name: 'duration_seconds', type: 'decimal', precision: 10, scale: 2, nullable: true }),
     __metadata("design:type", Number)
 ], Session.prototype, "durationSeconds", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'DURATION_MINUTES', type: 'decimal', precision: 10, scale: 4, nullable: true }),
+    (0, typeorm_1.Column)({ name: 'duration_minutes', type: 'decimal', precision: 10, scale: 4, nullable: true }),
     __metadata("design:type", Number)
 ], Session.prototype, "durationMinutes", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'COST', type: 'decimal', precision: 10, scale: 2, nullable: true }),
+    (0, typeorm_1.Column)({ type: 'decimal', precision: 10, scale: 2, nullable: true }),
     __metadata("design:type", Number)
 ], Session.prototype, "cost", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'STATUS', default: 'active', length: 20 }),
+    (0, typeorm_1.Column)({ default: 'active', length: 20 }),
     __metadata("design:type", String)
 ], Session.prototype, "status", void 0);
 __decorate([
-    (0, typeorm_1.CreateDateColumn)({ name: 'CREATED_AT' }),
+    (0, typeorm_1.CreateDateColumn)({ name: 'created_at' }),
     __metadata("design:type", Date)
 ], Session.prototype, "createdAt", void 0);
 exports.Session = Session = __decorate([
-    (0, typeorm_1.Entity)('SESSIONS')
+    (0, typeorm_1.Entity)('sessions')
 ], Session);
 //# sourceMappingURL=session.entity.js.map

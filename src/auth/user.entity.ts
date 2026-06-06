@@ -1,19 +1,19 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from 'typeorm';
 
-@Entity('USERS')
+@Entity('users')
 export class User {
-  @PrimaryGeneratedColumn({ name: 'ID' })
+  @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ name: 'USERNAME', length: 80, unique: true })
+  @Column({ length: 80, unique: true })
   username: string;
 
-  @Column({ name: 'PASSWORD_HASH', length: 255 })
+  @Column({ name: 'password_hash', length: 255 })
   passwordHash: string;
 
-  @Column({ name: 'ROLE', default: 'staff', length: 20 })
+  @Column({ default: 'staff', length: 20 })
   role: string;
 
-  @CreateDateColumn({ name: 'CREATED_AT' })
+  @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
 }
